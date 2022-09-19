@@ -1,0 +1,31 @@
+server:
+  port: 9081
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static/
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    prefix: classpath:/templates/
+    suffix: .html
+    servlet:
+      content-type: text/html
+    cache: false    #开发时关闭缓存,不然没法看到实时页面
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:63306/lagou-study?useUnicode=true&characterEncoding=utf8
+    username: druiduser
+    password: Wy@8180369
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
+  rabbitmq:
+    host: 127.0.0.1
+    virtual-host: /
+    port: 5672
+    username: admin
+    password: admin
+
